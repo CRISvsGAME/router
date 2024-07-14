@@ -1,0 +1,33 @@
+#section1 {
+    background-color: red;
+}
+
+#section2 {
+    background-color: green;
+}
+
+#section3 {
+    background-color: blue;
+}
+
+.router-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    display: none;
+}
+
+.router-section.active {
+    display: block;
+}
+
+.router-button {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.router-button.active {
+    background-color: white;
+    color: black;
+}
