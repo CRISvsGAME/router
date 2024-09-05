@@ -66,13 +66,13 @@ const router = new Router('router', {
     pageLoadCallback: (props) => {
         console.log(`Default Section: ${props.defaultSection}`);
         console.log(`Active Section: ${props.activeSection}`);
-        console.log(`Saved Section: ${props.activeSection}`);
+        console.log(`Saved Section: ${props.savedSection}`);
     },
     buttonClickCallback: (props) => {
         console.log(`Current Section: ${props.event.currentTarget.dataset.section}`);
         console.log(`Default Section: ${props.defaultSection}`);
         console.log(`Active Section: ${props.activeSection}`);
-        console.log(`Saved Section: ${props.activeSection}`);
+        console.log(`Saved Section: ${props.savedSection}`);
     }
 });
 ```
