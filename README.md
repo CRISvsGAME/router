@@ -63,12 +63,16 @@ const router = new Router('router', {
     initialDelay: 0,
     sectionDelay: 0,
     saveState: true,
-    refreshPageCallback: (savedSection) => {
-        console.log(`Saved Section: ${savedSection}`);
+    pageLoadCallback: (props) => {
+        console.log(`Default Section: ${props.defaultSection}`);
+        console.log(`Active Section: ${props.activeSection}`);
+        console.log(`Saved Section: ${props.activeSection}`);
     },
-    buttonClickCallback: (event, activeSection) => {
-        console.log(`Previous Section: ${activeSection}`);
-        console.log(`Current Section: ${event.currentTarget.dataset.section}`);
+    buttonClickCallback: (props) => {
+        console.log(`Current Section: ${props.event.currentTarget.dataset.section}`);
+        console.log(`Default Section: ${props.defaultSection}`);
+        console.log(`Active Section: ${props.activeSection}`);
+        console.log(`Saved Section: ${props.activeSection}`);
     }
 });
 ```
@@ -120,8 +124,8 @@ You can configure Router with the following options:
 -   **initialDelay**: Initial delay in milliseconds before starting.
 -   **sectionDelay**: Delay in milliseconds before changing the section.
 -   **saveState**: Save the active section to local storage.
--   **refreshPageCallback**: Callback function for page refreshes, containing the saved section ID.
--   **buttonClickCallback**: Callback function for button clicks, containing the event and the current section ID.
+-   **pageLoadCallback**: Callback function for page loads, containing the default, active, saved section IDs.
+-   **buttonClickCallback**: Callback function for button clicks, containing the event and the default, active, saved section IDs.
 
 ## License
 
