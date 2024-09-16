@@ -1,7 +1,5 @@
 # Router
 
-# Router
-
 Router is a simple JavaScript library to manage section navigation.
 
 ## Table of Contents
